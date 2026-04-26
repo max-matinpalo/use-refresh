@@ -9,7 +9,7 @@ export function refresh(name, data = null) {
 	if (!name) return;
 
 	// 2. Check existence
-	if (isDev && !handlers[name]) console.warn(`[refresh] No handler found for "${name}"`);
+	if (isDev && !handlers[name]) console.warn(`No component named "${name}" registered for refresh`);
 
 	// 3. Execute
 	if (handlers[name]) handlers[name](data);
@@ -21,11 +21,11 @@ export function useRefresh(name) {
 
 	useEffect(() => {
 		// 1. Validate
-		if (!name && isDev) console.warn("[useRefresh] Hook mounted without a name");
+		if (!name && isDev) console.warn("useRefresh() called without a name");
 		if (!name) return;
 
 		// 2. Check duplicate
-		if (isDev && handlers[name]) console.warn(`[useRefresh] Duplicate name "${name}" detected`);
+		if (isDev && handlers[name]) console.warn(`usRefresh() called with "${name}" - Name allready registered`);
 
 		// 3. Register
 		const handler = data => {

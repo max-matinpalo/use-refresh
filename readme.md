@@ -1,5 +1,5 @@
 # use-refresh
-**Trigger react component rerender from anywhere with single line of code.**
+**React hook to trigger component rerender from anywhere with single line of code.**  
 
 ```js
 function App () {
@@ -14,6 +14,7 @@ refresh("app");
 ```
 
 ## install
+Package size only ~350 bytes min+gzip
 ```bash
 npm install use-refresh
 ```
@@ -61,27 +62,47 @@ function Feed() {
 
 
 
-## Summary
+<details>
+<summary>Complete example</summary>
 
-<table>
-<tr><td><b><code>useRefresh("name")</code></b></td><td>register component for refresh</td></tr>
-<tr><td><b><code>refresh("name")</code></b></td><td>trigger refresh from any other component</td></tr>
-</table>
+```js
+import { useRefresh, refresh } from "use-refresh";
 
+export default function App() {
 
-**Package size only ~350 bytes min+gzip**
+	// 1. Register component for refresh
+	let data = useRefresh("main") || "Initial State";
 
+	return (
+		<div style={{ padding: "20px" }}>
+			<h1>App Data: {data}</h1>
+			<Test />
+		</div>
+	);
+}
 
----
+function Test() {
 
-#### Optional globals
-If you don't want to write imports of the `refresh()` and `useRefresh()`  
-Just import at app start the following file.
+	// 2. Refresh from anywhere, optional pass data
+	const handler = () => refresh("main", "Updated at " + new Date().toLocaleTimeString());
+
+	return (
+		<button onClick={handler}>
+			Test useRefresh
+		</button>
+	);
+}
+```
+</details> 
+<details>
+<summary>Optional globals</summary>
+If you don't want to write imports for useRefresh() and refresh()  
+Just import add the following import at app start.
 
 ```JS
 import "use-refresh/global"
 ```
-
+</details> 
 
 
 ## License

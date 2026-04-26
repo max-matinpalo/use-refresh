@@ -1,6 +1,6 @@
 {
 	"name": "use-refresh",
-	"version": "0.2.0",
+	"version": "1.0.1",
 	"description": "React hook to trigger component rerenders from anywhere.",
 	"author": "Max Matinpalo",
 	"type": "module",
