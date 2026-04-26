@@ -1,6 +1,7 @@
 # use-refresh
 [![npm version](https://img.shields.io/npm/v/use-refresh)](https://www.npmjs.com/package/use-refresh)
 [![license](https://img.shields.io/github/license/max-matinpalo/use-refresh)](https://github.com/max-matinpalo/use-refresh/blob/main/LICENSE)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/use-refresh)](https://bundlephobia.com/package/use-refresh)
 
 **React hook to trigger component rerender from anywhere with single line of code.**  
 

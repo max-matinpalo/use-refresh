@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const handlers = {};
-const isDev = process.env.NODE_ENV === "development";
+
+// @ts-ignore - process.env.NODE_ENV is replaced by bundlers
+const isDev = typeof process !== "undefined" && process.env.NODE_ENV === "development";
 
 export function refresh(name, data = null) {
 	// 1. Validate
