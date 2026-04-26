@@ -1,0 +1,27 @@
+{
+	"name": "use-refresh",
+	"version": "0.2.0",
+	"description": "React hook to trigger component rerenders from anywhere.",
+	"author": "Max Matinpalo",
+	"type": "module",
+	"license": "MIT",
+	"main": "useRefresh.js",
+	"exports": {
+		".": "./useRefresh.js",
+		"./global": "./global.js"
+	},
+	"keywords": [
+		"react",
+		"hook",
+		"refresh",
+		"rerender",
+		"use-refresh",
+		"zustand",
+		"redux",
+		"jotai",
+		"recoil",
+		"valtio",
+		"mobx",
+		"context"
+	]
+}
