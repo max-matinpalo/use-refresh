@@ -1,7 +1,7 @@
 {
 	"name": "use-refresh",
-	"version": "1.0.1",
-	"description": "React hook to trigger component rerenders from anywhere.",
+	"version": "1.0.2",
+	"description": "React hook to trigger component rerenders from anywhere",
 	"author": "Max Matinpalo",
 	"type": "module",
 	"license": "MIT",
@@ -10,6 +10,14 @@
 		".": "./useRefresh.js",
 		"./global": "./global.js"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/max-matinpalo/use-refresh.git"
+	},
+	"bugs": {
+		"url": "https://github.com/max-matinpalo/use-refresh/issues"
+	},
+	"homepage": "https://github.com/max-matinpalo/use-refresh#readme",
 	"keywords": [
 		"react",
 		"hook",
