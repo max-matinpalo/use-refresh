@@ -25,7 +25,7 @@ export function useRefresh(name) {
 		if (!name) return;
 
 		// 2. Check duplicate
-		if (isDev && handlers[name]) console.warn(`usRefresh() called with "${name}" - Name allready registered`);
+		if (isDev && handlers[name]) console.warn(`useRefresh() called with "${name}" - Name already registered`);
 
 		// 3. Register
 		const handler = data => {
